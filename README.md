@@ -8,9 +8,10 @@ Recently, I have been conducting research and developing my own home lab setup, 
 Along with this during my break of producing azure projects I have been attempting to learn the basics of python as well as familairse myself with terraform Syntax.
 
 **Preperation**
+
 Before even buying any products I needed to conduct some research into the best setup for what I wanted this NAS server for. looking at various videos on youtube and reading reviews and articles online allowed me to come to the conclusion that to get the server with the processing power I required and within budget specfications I needed to buy:
 
-Mini computer 
+Mini computer I chose a GMKtec mini pc with a ryzen 7 16gb RAM and intergrated graphics 
 
 DAS also known as Direct Attached Storage
 
@@ -30,7 +31,7 @@ Above shows the DAS with the 1tb SSD I had previously accquired.
 
 Once i have these Hard drives, this will alow me to use RAID technology to ensure that my data is protected and backed up to avoid any disruptions.
 
-As previously said I installed truenas os onto the minipc, this was instaled using a bootable USB which was created using rufus(a diskimaging software), the process was quick and simple and straightforward. 
+As previously said I installed truenas os onto the mini pc, this was installed using a bootable USB which was created using rufus(a diskimaging software), the process was quick and simple and straightforward. 
 
 *Below shows photos of the setup process*
 
@@ -43,3 +44,24 @@ As previously said I installed truenas os onto the minipc, this was instaled usi
 ![IMG_4804](https://github.com/user-attachments/assets/6e5b0c9b-e88a-4c48-9d6d-fdcffff47429)
 
 <img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/807b577e-b629-4fb4-a53a-80582e37d4ce" />
+
+**Jellyfin setup**
+
+![IMG_4845](https://github.com/user-attachments/assets/a02c0d58-912a-4b0a-91fe-5eea4f0f35ec)
+
+Above shows a small plan of the architecture of how the current setup will occur, I have put each device into layers briefly following the OSI layer model
+
+My first task was to create a dedicated space for the related files to be assoicated with I named this Livev1 and enabled SMB sharing to this folder.
+
+<img width="909" height="427" alt="image" src="https://github.com/user-attachments/assets/3653b56d-9ebc-49bf-9fa0-78483f7c3bbc" />
+
+*Above shows the SMB file share being enabled within the truenas share feature menu*
+
+next was to create an assoicated smb "workgroup" under the credentials/group tab then a local user 
+
+locate and download jelllyfin which will prompt a setup dialog.
+
+<img width="950" height="704" alt="image" src="https://github.com/user-attachments/assets/f3e13dfe-a2bf-4d2b-b889-c840823613db" />
+
+*Above shows using the discover app feature within truenas to find the jellyfin container app.*
+
