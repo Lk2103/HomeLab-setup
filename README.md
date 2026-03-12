@@ -59,6 +59,11 @@ My first task was to create a dedicated space for the related files to be assoic
 
 next was to create an assoicated smb "workgroup" under the credentials/group tab then a local user 
 
+I needed to go to the ACL(Access Control List) settings to enable the new "JellyFinUser" user to be able to access this specfic SMB file
+
+<img width="1221" height="557" alt="image" src="https://github.com/user-attachments/assets/1b84faaf-d014-4059-840c-d4e95b72e9ec" />
+*Where I needed to go within the share feature to adjust the ACL settings
+
 locate and download jelllyfin which will prompt a setup dialog.
 
 <img width="950" height="704" alt="image" src="https://github.com/user-attachments/assets/f3e13dfe-a2bf-4d2b-b889-c840823613db" />
