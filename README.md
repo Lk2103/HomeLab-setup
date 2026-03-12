@@ -71,5 +71,13 @@ locate and download jelllyfin which will prompt a setup dialog.
 *Above shows using the discover app feature within truenas to find the jellyfin container app.*
 
 <img width="1503" height="610" alt="image" src="https://github.com/user-attachments/assets/c3c11c09-9ad2-4f0b-a565-99002315303a" />
-Filling out credentials relating to the NAs system
+*Filling out credentials relating to the NAS system*
 
+<img width="1103" height="599" alt="image" src="https://github.com/user-attachments/assets/fde46c62-3ebd-4156-a57e-51651a87d3e9" />
+*Showing the app to the SMB storage that was allocated*
+
+<img width="1910" height="818" alt="image" src="https://github.com/user-attachments/assets/710c55ed-f903-4b43-a7ec-9ee7f80f0c05" />
+After completing the setup the jellyfin server was enabled and running from the NAS, this could be accessed by web UI as shown above
+
+Issues that occured
+When going through this setup some of the options were incorrectly selected, it was important to also ensure that the correct directory for storage was implemented to avoid errors.
