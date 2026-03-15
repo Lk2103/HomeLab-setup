@@ -1,35 +1,53 @@
 # HomeLab-setup
-Through my passion of Devops and Technology, I have decided to create my own personal server where I can easily share files from.
+Through my passion of DevOps and technology, I have decided to create my own personal server where I can easily share files from.
 
-**Project Overview**
+**My goals**
 
-Recently, I have been conducting research and developing my own home lab setup, this is to further support my devops journey. I hope for this to help me build upon previously accquired skills as well as provide me with the oppurtunity to learn more. From my conducted research this will help me learn a varitey of topics such as  vpn tunnelling to provide remote access using tailscale which uses mesh topology to my NA(Network Attached Setup) setup from anywhere via a secured channel, other topics include Local file sharing using SMB protocol, It could potentially also be useful to conduct a project in which I connect my home NAS to azure to demonstrate the simplisty
+ - To Configure a fully functional NAS which could deliver my required needs:
 
-Along with this during my break of producing azure projects I have been attempting to learn the basics of python as well as familairse myself with terraform Syntax.
+    * Capable of being accessible anywhere via WebUI
+    * Being accessible anywhere means that it is also required to be as secure as possible
+    * Capable of function as a VM library,JellyFin/Entertainment system and an archive for emulation games
 
-**Preperation**
+Through acomplishing these goals I will learn a variety of skills such as:
+* VPN tunnelling configuration
+* SMB file sharing configuration
+* Further improvment of researching complex procedures
+* Firewall, Conditional Access and Credential skills
 
-Before even buying any products I needed to conduct some research into the best setup for what I wanted this NAS server for. looking at various videos on youtube and reading reviews and articles online allowed me to come to the conclusion that to get the server with the processing power I required and within budget specfications I needed to buy:
+**Preparation**
 
-Mini computer I chose a GMKtec mini pc with a ryzen 7 16gb RAM and intergrated graphics 
+Before even buying any products I needed to conduct some research into the best setup for what I wanted this NAS server for. looking at various videos on youtube and reading reviews and articles online allowed me to come to the conclusion that to get the server with the processing power I required and within budget specifications I needed to buy:
+
+Mini computer I chose a (GMKtec mini pc with a ryzen 7 16gb RAM and integrated graphics)
 
 DAS also known as Direct Attached Storage
 
-I chose a DAS to essentially offload the pressure of the computer itself which otherwise would need to provide power to cool and run the hard drives. The purpose of this setup was not only for educational purposes but, to also provide a foundation for an entertainment center database where I could access all my films that were previously DVDs, it could also later be beneficial to provide a stepping stone for demonstrations of cloud computing intergration scenarios and AI system intergartion
+I chose a DAS to essentially offload the pressure of the computer itself which otherwise would need to provide power to cool and run the hard drives. The purpose of this setup was not only for educational purposes but, to also provide a foundation for an entertainment center database where I could access all my films that were previously DVDs, it could also later be beneficial to provide a stepping stone for demonstrations of cloud computing integration scenarios and AI system intergartion
 
-There are various different operating systems I could have chosen, I decided to install truenas, this is a community and industry standard OS that provides a variety of features including valuable resources such as VM capabilties. This Operating system will provide insight into ZFS filesystems
+There are various different Operating Systems that I could have chosen, I decided to install TrueNAS, this is a community and industry standard OS that provides a variety of features including valuable resources such as VM capabilties. This Operating system will provide insight into ZFS filesystems where I will have control over Volume allocation which benefits what I require from the Server.
+
+**Research**
+Before proceeding with any of the decisions I made its important to conduct research and note down my findings, not only as best pratice but, to avoid mistakes and delays in project deployment:
+
+- Research regarding hardware configuration:
+
+Using various youtube videos found by creators such as DammitJeff, Jimmy Tries World and Sean Aslam as well as using websites such as TomHardware Reddit and TechRadar I produced a Pros and Cons list for each hardware setup to ensure I chose the correct hardware for my personal requirements Below you can see a picture of these lists outlining why I chose a Mini PC with DAS integration setup.
+
+
 
 **What I learnt**
-Throughout this whole project(which will contuine to develop and grow) I have learnt a varitey of different things. There were a vast amount of oppurunities to learn from resolving communication issues to remote access setups.
 
-Once the server was setup I could install my first hard drive, as i currently only have one it meant that it was difficult to justify using RAID format to ensure redundancy within my data however I will be installing two inudstry standard server specfic hard drives. Due to AI and datacenter demands there has been a dramatic spike within. 
+Throughout this whole project (which will continue to develop and grow) I have learnt a variety of different things. There were a vast amount of opportunities to learn from resolving communication issues to remote access setups.
+
+Once the server was setup I could install my first hard drive, as i currently only have one it meant that it was difficult to justify using RAID format to ensure redundancy within my data however I will be installing two industry standard server specific hard drives. Due to AI and datacenter demands there has been a dramatic spike within. 
 
 ![IMG_4798](https://github.com/user-attachments/assets/e287ffba-81d5-4e66-9dbb-f174d6a43038)
 
-Above shows the DAS with the 1tb SSD I had previously accquired.
+Above shows the DAS with the 1tb SSD I had previously acquired.
 
 
-Once i have these Hard drives, this will alow me to use RAID technology to ensure that my data is protected and backed up to avoid any disruptions.
+Once i have these Hard drives, this will allow me to use RAID technology to ensure that my data is protected and backed up to avoid any disruptions.
 
 As previously said I installed truenas os onto the mini pc, this was installed using a bootable USB which was created using rufus(a diskimaging software), the process was quick and simple and straightforward. 
 
@@ -51,15 +69,15 @@ As previously said I installed truenas os onto the mini pc, this was installed u
 
 Above shows a small plan of the architecture of how the current setup will occur, I have put each device into layers briefly following the OSI layer model
 
-My first task was to create a dedicated space for the related files to be assoicated with I named this Livev1 and enabled SMB sharing to this folder.
+My first task was to create a dedicated space for the related files to be associated with I named this Livev1 and enabled SMB sharing to this folder.
 
 <img width="909" height="427" alt="image" src="https://github.com/user-attachments/assets/3653b56d-9ebc-49bf-9fa0-78483f7c3bbc" />
 
 *Above shows the SMB file share being enabled within the truenas share feature menu*
 
-next was to create an assoicated smb "workgroup" under the credentials/group tab then a local user 
+next was to create an associated smb "workgroup" under the credentials/group tab then a local user 
 
-I needed to go to the ACL(Access Control List) settings to enable the new "JellyFinUser" user to be able to access this specfic SMB file
+I needed to go to the ACL(Access Control List) settings to enable the new "JellyFinUser" user to be able to access this specific SMB file
 
 <img width="1221" height="557" alt="image" src="https://github.com/user-attachments/assets/1b84faaf-d014-4059-840c-d4e95b72e9ec" />
 *Where I needed to go within the share feature to adjust the ACL settings*
@@ -71,7 +89,7 @@ locate and download jelllyfin which will prompt a setup dialog.
 *Above shows using the discover app feature within truenas to find the jellyfin container app.*
 
 <img width="1503" height="610" alt="image" src="https://github.com/user-attachments/assets/c3c11c09-9ad2-4f0b-a565-99002315303a" />
-*Filling out credentials relating to the NAS system*
+*Filling out credentials such as time zone and public url*
 
 <img width="1103" height="599" alt="image" src="https://github.com/user-attachments/assets/fde46c62-3ebd-4156-a57e-51651a87d3e9" />
 *Showing the app to the SMB storage that was allocated*
@@ -79,5 +97,5 @@ locate and download jelllyfin which will prompt a setup dialog.
 <img width="1910" height="818" alt="image" src="https://github.com/user-attachments/assets/710c55ed-f903-4b43-a7ec-9ee7f80f0c05" />
 After completing the setup the jellyfin server was enabled and running from the NAS, this could be accessed by web UI as shown above
 
-Issues that occured
+Issues that occurred
 When going through this setup some of the options were incorrectly selected, it was important to also ensure that the correct directory for storage was implemented to avoid errors.
