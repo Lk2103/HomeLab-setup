@@ -2,7 +2,7 @@
 
 Through my passion for DevOps and technology, I have decided to create my own personal server where I can easily share files from.
 
-**My goals**
+## Goals
 
  - To Configure a fully functional NAS which could deliver my required needs:
 
@@ -16,7 +16,7 @@ Through accomplishing these goals I will learn a variety of skills such as:
 * Further improvement of researching complex procedures
 * Firewall, Conditional Access and Credential skills
 
-**Preparation**
+## Preparation
 
 Before even buying any products, I needed to conduct some research into the best setup for what I wanted this NAS server for. looking at various videos on youtube and reading reviews and articles online allowed me to come to the conclusion that to get the server with the processing power I required and within budget specifications I needed to buy:
 
@@ -28,7 +28,7 @@ I chose a DAS to essentially offload the hardware load of the computer itself wh
 
 There are various different Operating Systems that I could have chosen, I decided to install TrueNAS, this is a community supported and industry standard OS that provides a variety of features including valuable resources such as VM capabilities. This Operating system will provide insight into ZFS filesystems where I will have control over Volume allocation which benefits what I require from the Server.
 
-**Research**
+## Research
 Before proceeding with any of the decisions I made. Its important to conduct research and note down my findings, not only as best practice but, to avoid mistakes and delays in project deployment:
 
 **Research regarding hardware configuration:**
@@ -70,7 +70,7 @@ Using various YouTube videos found by creators such as DammitJeff, Jimmy Tries W
 
 It is important to take into account that I may potentially want to integrate AI into the server to produce an all round offline AI assistant (this requires a good processor and decent amount of RAM). This option also provides the biggest opportunity to learn.
 
-**Production**
+## Production
 
 Throughout this whole project (which will continue to develop and grow) I have learnt a variety of different things. There were a vast amount of opportunities to learn from resolving communication issues to remote access setups.
 
