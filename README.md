@@ -166,4 +166,4 @@ When going through this setup some of the options were incorrectly selected, it 
 
 ## Improvements and Evaluation
 
-As a whole I believe that this setup is the most ideal for my situation. I have carefully chosen the best hardware within my budget, while ensuring the system remains scalable for future intergrationa nd upgrades.
+As a whole I believe that this setup is the most ideal for my situation. I have carefully chosen the best hardware within my budget, while ensuring the system remains scalable for future intergration and upgrades.
