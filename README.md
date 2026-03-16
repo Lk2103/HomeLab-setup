@@ -1,6 +1,6 @@
 # HomeLab-setup
 
-Through my passion for DevOps and technology, I have decided to create my own personal server where I can easily share files from.
+Through my passion for DevOps and technology, I have decided to create my own personal server which will act as a central hub for any of my IT related projects.
 
 ## Goals
 
@@ -20,18 +20,18 @@ Through accomplishing these goals I will learn a variety of skills such as:
 
 Before even buying any products, I needed to conduct some research into the best setup for what I wanted this NAS server for. looking at various videos on youtube and reading reviews and articles online allowed me to come to the conclusion that to get the server with the processing power I required and within budget specifications I needed to buy:
 
-A mini computer I chose a GMKtec Mini pc with a Ryzen 7 16gb RAM and integrated graphics
+A mini computer (I chose a GMKtec Mini pc with a Ryzen 7 16gb RAM and integrated graphics)
 
 DAS also known as Direct Attached Storage
 
-I chose a DAS to essentially offload the hardware load of the computer itself which otherwise would need to provide power to cool and run the hard drives. The purpose of this setup was not only for educational purposes but, to also provide a foundation for an entertainment center database where I could access all my films that were previously DVDs, it could also later be beneficial to provide a stepping stone for demonstrations of cloud computing integration scenarios and AI system integration
+I chose a DAS to essentially reduce the hardware load on the main computer itself, which otherwise would need to provide power to cool and run the hard drives. The purpose of this setup was not only for educational purposes but, to also provide a foundation for an entertainment center database where I could access all my films that were previously DVDs, it could also later be beneficial to provide a stepping stone for demonstrations of cloud computing integration scenarios and AI system integration
 
 There are various different Operating Systems that I could have chosen, I decided to install TrueNAS, this is a community supported and industry standard OS that provides a variety of features including valuable resources such as VM capabilities. This Operating system will provide insight into ZFS filesystems where I will have control over Volume allocation which benefits what I require from the Server.
 
 ## Research
 Before proceeding with any of the decisions I made. Its important to conduct research and note down my findings, not only as best practice but, to avoid mistakes and delays in project deployment:
 
-**Research regarding hardware configuration:**
+### Research regarding hardware configuration:
 
 Using various YouTube videos found by creators such as DammitJeff, Jimmy Tries World and Sean Aslam as well as using websites such as Tom's Hardware Reddit and TechRadar I produced a pros and cons list for each hardware setup to ensure I chose the correct hardware for my personal requirements Below you can see these lists outlining why I chose a Mini PC with DAS integration setup.
 
@@ -70,18 +70,39 @@ Using various YouTube videos found by creators such as DammitJeff, Jimmy Tries W
 
 It is important to take into account that I may potentially want to integrate AI into the server to produce an all round offline AI assistant (this requires a good processor and decent amount of RAM). This option also provides the biggest opportunity to learn.
 
+### Research Regarding security
+
+Before proceeding with this section I would like to outline that typically firewall protection would come in the form of software however, TrueNAS does not provide a built in firewall management system so network security is typically hadnlded using external network devices.
+
+Its important that correct security measures are in place due to me using this remotely from other networks. Using AI allowed me to narrow down some of the options which could be beneficial. At first my idea was to use my previously acquired Raspberry Pi or Lattepanda v1 as a firewall protection device. However, after asking ChatGPT and conducting my own research into the specifications of these devices:
+
+Raspberry Pi 2 B:
+- Old outdated hardware
+- Limited firmware for Ethernet port (Therefore reduced bandwidth)
+
+LattePanda V1:
+- Newer hardware compared to the Raspberry Pi but not what it was intended to do
+- Also limited firmware for Ethernet port
+
+Upon doing further research into what typical enterprise standard firewall protection devices I was able to find some budget dedicated protection devices. I realised that its crucial that aspects such as security cant be worked around using old hardware with limited capabilites. Its important to note that a majority of industry standard firewall protection devices not only cost £300 upwards but also require subscriptions, this is why I chose to ensure I chose a specific device that meets my needs without being too expensive. Some of the options I considered were:
+
+ASUS EBG15 5-Port Gigabit VPN Wired Router
+
+Mikrotik - hEX 5 Port Gigabit 512Mb
+
+TP-Link TL-R605 SafeStream Gigabit Multi-WAN VPN Router
+
+I chose the ASUS EBG15 this is because this provides the best security at the same price as the other devices. This is due to there being layer 7 firewall protection, this means that I will be able to monitor app internet usage.
+
 ## Production
 
-Throughout this whole project (which will continue to develop and grow) I have learnt a variety of different things. There were a vast amount of opportunities to learn from resolving communication issues to remote access setups.
-
-Once the server was setup I could install my first hard drive, as I currently only have one it meant that it was difficult to justify using RAID format to ensure redundancy within my data however I will be installing two industry standard server specific hard drives. Due to AI and data center demands there has been a dramatic spike within. 
+Once the server was setup I could install my first hard drive, as I currently only have one it meant that it was difficult to justify using RAID format to ensure redundancy within my data however I will be installing two industry standard server specific hard drives. Due to increasing AI and data center demands there has been a dramatic spike in hard drive prices. 
 
 ![IMG_4798](https://github.com/user-attachments/assets/e287ffba-81d5-4e66-9dbb-f174d6a43038)
 
 Above shows the DAS with the 1tb SSD I had previously acquired.
 
-
-Once I have these Hard drives, this will allow me to use RAID technology to ensure that my data is protected and backed up to avoid any disruptions.
+Once I have these hard drives, this will allow me to use RAID technology to ensure that my data is protected and backed up to avoid any disruptions.
 
 As previously said I installed TrueNAS os onto the mini pc, this was installed using a bootable USB which was created using Rufus(a disk imaging software), the process was quick and simple and straightforward. 
 
@@ -97,7 +118,22 @@ As previously said I installed TrueNAS os onto the mini pc, this was installed u
 
 <img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/807b577e-b629-4fb4-a53a-80582e37d4ce" />
 
-**Jellyfin setup**
+## What I learnt
+Throughout this whole project (which will continue to develop and grow) I have learnt a variety of different things. There were a vast amount of opportunities to learn from resolving communication issues to remote access setups.
+I have learned skills such as:
+### Technical skills
+- SMB file sharing configuration
+- ACL permission knowledge and experience
+- Application deployment
+### Infrastructure
+- NAS architecture and storage planning
+- Hardware Decision making and Infrastructure planning
+- Network security considerations
+- Researching and analytics of hardware specifications
+### Problem solving
+- Troubleshooting system configurations
+  
+## Jellyfin setup
 
 ![IMG_4845](https://github.com/user-attachments/assets/a02c0d58-912a-4b0a-91fe-5eea4f0f35ec)
 
@@ -109,7 +145,7 @@ My first task was to create a dedicated space for the related files to be associ
 
 *Above shows the SMB file share being enabled within the TrueNAS share feature menu*
 
-next was to create an associated smb "workgroup" under the credentials/group tab then a local user 
+Next, I created an associated SMB "workgroup" under the credentials/group tab then a local user 
 
 I needed to go to the ACL(Access Control List) settings to enable the new "JellyFinUser" user to be able to access this specific SMB file
 
@@ -117,7 +153,7 @@ I needed to go to the ACL(Access Control List) settings to enable the new "Jelly
 
 *Where I needed to go within the share feature to adjust the ACL settings*
 
-locate and download jelllyfin which will prompt a setup dialog.
+I then located and downloaded Jellyfin, which prompted a setup dialog.
 
 <img width="1103" height="599" alt="image" src="https://github.com/user-attachments/assets/fde46c62-3ebd-4156-a57e-51651a87d3e9" />
 *Showing the app to the SMB storage that was allocated*
@@ -127,3 +163,7 @@ After completing the setup the Jellyfin server was enabled and running from the 
 
 Issues that occurred
 When going through this setup some of the options were incorrectly selected, it was important to also ensure that the correct directory for storage was implemented to avoid errors.
+
+## Improvements and Evaluation
+
+As a whole I believe that this setup is the most ideal for my situation. I have carefully chosen the best hardware within my budget, while ensuring the system remains scalable for future intergrationa nd upgrades.
