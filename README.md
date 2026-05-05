@@ -16,6 +16,8 @@ Through my passion for DevOps and technology, I have decided to create my own pe
 
 [Jellyfin setup](#jellyfin-setup)
 
+[Issues That Occurred](#issues-that-occurred)
+
 [Improvements and Evaluation](#improvements-and-evaluation)
 
 [Updates](#updates)
@@ -179,12 +181,51 @@ I then located and downloaded Jellyfin, which prompted a setup dialog.
 <img width="1910" height="818" alt="image" src="https://github.com/user-attachments/assets/710c55ed-f903-4b43-a7ec-9ee7f80f0c05" />
 After completing the setup the Jellyfin server was enabled and running from the NAS, this could be accessed by web UI as shown above
 
-Issues that occurred
+## Issues that occurred
 When going through this setup some of the options were incorrectly selected, it was important to also ensure that the correct directory for storage was implemented to avoid errors.
 
 ## Improvements and Evaluation
 
 As a whole I believe that this setup is the most ideal for my situation. I have carefully chosen the best hardware within my budget, while ensuring the system remains scalable for future intergration and upgrades.
 
-##Updates
+## Updates
+
+Over the past couple of weeks I have not been uploading to Github, however I have been working on various different projects ensuring that all devices are secure and my setup is the best it can be. within this section I will be listing my recent updates to the setup
+
+14/03/2026 -
+
+I have been experimenting with VPN setups for my own isolated network. As shown within this project I bought a ASUS switch which allows me to isolate my computer and my server including when they have interent access etc.
+
+within my asus switch I was able to use my vpn config file which allows me to ensure all devices within this isolated section of my network are secured via a VPN. Below shows the option within the WebUI of the ASUS switch.
+
+======
+
+Its important I show the research that went into this before I decided what VPN I used as well as the protocol used which will be covered below
+
+Research on VPN's
+Using various sources which are listted below I was looking for a performance, reliability and security based VPN. Reading previous articles it was made apparent by the press that some Virtual Private Network Providers store information of the user
+
+=====
+
+The next step was to choose WireGuard or OpenVPN protocols. **The first Question I needed to ask was whats the difference?**
+
+OpenVPN - This is the Older VPN protocol out of the two. Made in 2001 it has been adjusted contionously since this time, this means it has been kept up to date below shows some advantages and disadvantages:
+
+Advantages:
+
+* Flexible and commonly used
+
+* 22 years of testing means that most exploits have been found
+
+* Supports Dynamic IP functionailities e.g. constant changing of IP
+
+
+Disadvantages:
+
+* The updating of the protocol has meant that the code has grown to 70k to 100k lines
+  
+* Slower to run and harder to troubleshoot and inspect due to its big codespace.
+  
+* Bigger code space does mean that despite efforts there is more likely a risk of exploits 
+
 
