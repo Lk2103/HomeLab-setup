@@ -198,7 +198,12 @@ I have been experimenting with VPN setups for my own isolated network. As shown 
 
 within my asus switch I was able to use my vpn config file which allows me to ensure all devices within this isolated section of my network are secured via a VPN. Below shows the option within the WebUI of the ASUS switch.
 
-======
+Below shows the VPN function as you can see a private key needs to included which can be found within my surfshark account(not shown for secuirty reasons)
+
+<img width="1573" height="454" alt="image" src="https://github.com/user-attachments/assets/3e5136a0-14bd-4361-b822-367200bd58c8" />
+
+
+<img width="944" height="900" alt="image" src="https://github.com/user-attachments/assets/9376126a-802e-4e2b-bf8f-f1c2be30ef52" />
 
 ### Why a VPN?
 
@@ -225,7 +230,6 @@ So it is important that I ensured I did my research into the company to ensure m
 Some of the main VPN providers I looked at:
 
 NordVPN
-
 
 SurfShark
 
