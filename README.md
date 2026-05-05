@@ -12,7 +12,7 @@ Through my passion for DevOps and technology, I have decided to create my own pe
 
 [Production](#production)
 
-[What I learnt](#What-I-learnt)
+[What I learnt](#what-I-learnt)
 
 [Jellyfin setup](#jellyfin-setup)
 
