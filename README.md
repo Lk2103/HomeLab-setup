@@ -200,12 +200,45 @@ within my asus switch I was able to use my vpn config file which allows me to en
 
 ======
 
-Its important I show the research that went into this before I decided what VPN I used as well as the protocol used which will be covered below
+### Why a VPN?
+
+A VPN has various advanatges and potential draw backs depending on the scenario in which they are used:
+
+One important advantage of Virtual Private Networks is that they add another layer of defence against poorlly designed unprotected intranet services and add encryption between devices
+
+It is particaulary effective in preventing external unauthorised users gaining access to servers within the network
+
+Enables the sharing of files wherever the devices are in the world as long as they are conncected  to the same internal network
+
+Below I show the research that went into this before I decided what VPN I used as well as the protocol used which will be covered below
+
+One main vital draw back which is important to take into advanatge is that internet speeds can be effected depending on the VPN service that is chosen and the lcoation of the server, along with this the use of dynamic IP changing can cause services to fail.
+
 
 Research on VPN's
-Using various sources which are listted below I was looking for a performance, reliability and security based VPN. Reading previous articles it was made apparent by the press that some Virtual Private Network Providers store information of the user
+Using various sources which are listted below I was looking for a performance, reliability and security based VPN. Reading previous articles it was made apparent by the press that some Virtual Private Network Providers store logs from users. Just from a quick search shows the following article of Hong Kong based companies illegally leaking user data and information:
 
-=====
+https://www.pcmag.com/news/7-vpn-services-found-recording-user-logs-despite-no-log-pledge
+
+So it is important that I ensured I did my research into the company to ensure my safety and privacy despite what policy the company claims to adhere by, sources such as reviews and tech blogs can give me a better insight into any secuirty flaws and misconduct.
+
+Some of the main VPN providers I looked at:
+
+NordVPN
+
+
+SurfShark
+
+ProtonVPN
+
+I chose Surfshark for the following reasons:
+
+- It provided OpenVPN and Wireguard Protocol support
+
+- It is partnered with NordVPN which is a reliable and trusted company that most users have positvie experiences with
+
+- Simple Interface and is alos comptiable with my ASUSexpertWifi Switch
+
 
 The next step was to choose WireGuard or OpenVPN protocols. **The first Question I needed to ask was whats the difference?**
 
@@ -228,4 +261,19 @@ Disadvantages:
   
 * Bigger code space does mean that despite efforts there is more likely a risk of exploits 
 
+WireGuard - The newer protcol built to be efficient and faster but including the same secuirty infrastructure like OpenVPN
+
+Advantages:
+
+* Less code Faster and more efficient
+
+* Easier to setup
+
+* Despite less code WireGuard competes with OpenVPN for best secruity orientated protocol
+
+Disadvantages:
+
+* Only one option for encryption(ChaCha20)
+
+* Doesn't Include Dynamic IP functionalities
 
