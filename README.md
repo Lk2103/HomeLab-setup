@@ -2,9 +2,9 @@
 
 Through my passion for DevOps and technology, I have decided to create my own personal server which will act as a central hub for any of my IT related projects.
 
-[goals](##goals)
+[goals](#goals)
 
-[updates](##updates)
+[updates](#updates)
 
 ## Goals
 
