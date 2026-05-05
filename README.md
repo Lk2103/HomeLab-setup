@@ -2,11 +2,23 @@
 
 Through my passion for DevOps and technology, I have decided to create my own personal server which will act as a central hub for any of my IT related projects.
 
+## Index
+
 [Goals](#goals)
 
-[updates](#updates)
+[Preparation](#preparation)
 
+[Research](#research)
 
+[Production](#production)
+
+[What I learnt](#What-I-learnt)
+
+[Jellyfin setup](#jellyfin-setup)
+
+[Improvements and Evaluation](#improvements-and-evaluation)
+
+[Updates](#updates)
 
 ## Goals
 
